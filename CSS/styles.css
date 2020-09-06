@@ -1,3 +1,34 @@
 body {
-    background-image: ;
+    background-image:url("../images/bckgrndImg.jpg") ;
+    background-attachment: fixed;
+    margin: 0px;
+    padding:opx ;
 }
+*{
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+#navContainer {
+    widows: 100px;
+    height: 60px;
+    background-color: coral;
+    box-shadow: crimson;
+}
+#navContent {
+    height: 100px;
+}
+.items-list {
+    display: flex;
+
+}
+.items-list ul li a{
+    font-family: Tahoma;
+    padding: 5px 25px;
+    
+}
+
