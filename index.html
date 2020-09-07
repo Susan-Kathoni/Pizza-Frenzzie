@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-8">
                     <h1>
-                        <b>Welcome to Suzzie's delight.<br />
+                        <b>Welcome to Suzzie's Delights.<br />
                             Your favorite yummies!!!</b>
                     </h1>
                 </div>
@@ -99,7 +99,7 @@
                                 <option value="sweet Onions">Sweet Onions</option>
                                 <option value="ham">Ham</option>
                             </select>
-                        </div> -->
+                        </div>
                         <!---------------------------pizza crust----------------------->
                         <div class="form-group">
                             <label for="crust">Crust</label>
@@ -114,49 +114,106 @@
                         <div class="form-group">
                             <label for="size">Size</label>
                             <select class="form-control" id="size" required>
-                                <option value="">...</option>
+                                <option value="">Select</option>
                                 <option value="regular">Regular</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
                                 <option value="extra-large">Extra Large</option>
                             </select>
                         </div>
+                        <!------------------------------More orders ---------------------->
+                        <button type="submit" class="btn btn-primary">Make more order(s)</button>
+                    </form>
+                    <br />
+                </div>
+                <!------------------------------------List of orders-------------------->
+                <div class="col-md-8 hidden" id="orders-div">
+                    <h3>Your Pizza Delights placed order(s)</h3>
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Flavour</th>
+                                <th scope="col">Toppings</th>
+                                <th scope="col">Crust</th>
+                                <th scope="col">Size</th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th scope="col"><b>TOTAL</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-summary"></tbody>
+                    </table>
+                    <!---------------------------Delivery cost------------------------>
+                    <p class="delivery-cost hidden">
+                        Delivery cost: Ksh. <span id="delivery-amount"></span>
+                    </p>
+                    <p class="total-amount hidden">
+                        Total bill: Ksh. <span id="total-amount"></span>
+                    </p>
+                    <br /><br />
+                    <button class="btn btn-primary hidden" id="checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-options hidden">
+            <h3>Checkout Form</h3>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Delivery Option</label>
+                    <select class="form-control" id="delivery-option" required>
+                        <option value="">Choose</option>
+                        <option value="deliver">Deliver</option>
+                        <option value="collect">Collect</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enter</button>
+            </form>
+        </div>
+        <!------------------------------------------Customer's delivery details------------------------->
+        <div class="delivery-details">
+            <form id="deliveryContacts-form">
+                <h3>Enter your pick order(s) point:</h3>
+                <div class="form-group">
+                    <label>Sub-county</label>
+                    <input type="text" class="form-control" id="location" placeholder="Type Your sub-location.." required />
+                </div>
+                <div class="form-group">
+                    <label>Enter a landmark in your locality:</label>
+                    <input type="text" class="form-control" id="landmark" placeholder="Type a landmark to stablish your location.." required />
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Please provide your contact number:</label>
+                    <input type="number" class="form-control" id="contact-number" placeholder="Enter Your mobile number.." required />
+                </div>
 
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!--------------------------jquery------------------------>
-                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                            crossorigin="anonymous"></script>
-                        <!----------------------- popper js----------------------->
-                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                            crossorigin="anonymous"></script>
-                        <!----------------bootstrap css--------------------------->
-                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-                            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-                            crossorigin="anonymous"></script>
-                        <!-----------------------bootstrap js--------------------->
-                        <script src="./JavaScript/js/bootstrap.min.js"></script>
-                        <!----------------------font awesome--------------------->
-                        <scripts src="https://kitfontawesome.com/332a215f17.js" crossorigin="anonymous"></scripts>
-                        <!-----------------custom js------------------------------>
-                        <script type="text/javascript" src="./JavaScript/scripts.js"></script>
+        <!--------------------------jquery------------------------>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <!----------------------- popper js----------------------->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <!----------------bootstrap css--------------------------->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+        <!-----------------------bootstrap js--------------------->
+        <script src="./JavaScript/js/bootstrap.min.js"></script>
+        <!----------------------font awesome--------------------->
+        <scripts src="https://kitfontawesome.com/332a215f17.js" crossorigin="anonymous"></scripts>
+        <!-----------------custom js------------------------------>
+        <script type="text/javascript" src="./JavaScript/scripts.js"></script>
 </body>
 
 </html>
