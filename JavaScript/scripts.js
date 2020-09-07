@@ -155,6 +155,15 @@ Pizza.prototype.getCrustPrice = function () {
         }
     }
 };
+//-------------------------- customer's order---------------->
+var customerName = "";
+
+  var totalCost = 0;
+
+  var pizzasOrdered = [];
+
+  var estate = "";
+  var houseNumber = "";
         
 
 
