@@ -121,4 +121,40 @@ Pizza.prototype.getToppingPrice = function () {
         }
     }
 };
-  
+//-------------------------------Price:crust------------------>
+Pizza.prototype.getCrustPrice = function () {
+    if (this.crust === "thin") {
+        if (this.size === "regular")
+            return 50;
+    } else if (this.size === "medium") {
+        return 80;
+    } else if (this.size === "large") {
+        return 100;
+    } else {
+        return 120;
+    }
+    if (this.crust === "thick") {
+        if (this.size === "regular")
+            return 60;
+    } else if (this.size === "medium") {
+        return 90;
+    } else if (this.size === "large") {
+        return 110;
+    } else {
+        return 130;
+    }
+    if (this.crust === "double") {
+        if (this.size === "regular") {
+            return 70;
+        } else if (this.size === "medium") {
+            return 100;
+        } else if (this.size === "large") {
+            return 120;
+        } else {
+            return 140;
+        }
+    }
+};
+        
+
+
