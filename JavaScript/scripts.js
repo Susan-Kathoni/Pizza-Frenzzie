@@ -7,8 +7,8 @@ $(document).ready(function () {
     }
     Pizza.prototype.getPizzaPrice = function () {
         return this.getCrustPrice() + this.getToppingPrice() + this.getFlavourPrice();
-      };  
-})
+    };
+
 //---------------------------Price:flavour--------------------->
 Pizza.prototype.getFlavourPrice = function () {
     if (this.size === "regular") {
@@ -16,7 +16,7 @@ Pizza.prototype.getFlavourPrice = function () {
             return 300;
         } else if (this.flavour === "cheese-pizza") {
             return 500;
-        } else if (this.fllavour === "chicken-hawaiian") {
+        } else if (this.flavour === "chicken-hawaiian") {
             return 400;
         } else if (this.flavour === "macon-bbq") {
             return 480;
@@ -53,7 +53,7 @@ Pizza.prototype.getFlavourPrice = function () {
         } else {
             return 500;
         }
-    } else if (this.size === "etra-large") {
+    } else if (this.size === "extra-large") {
         if (this.flavour === "beef-pepporoni") {
             return 800;
         } else if (this.flavour === "cheese-pizza") {
@@ -83,7 +83,7 @@ Pizza.prototype.getToppingPrice = function () {
         } else {
             return 90;
         }
-    } if (this.size === "medium") {
+    } else if (this.size === "medium") {
         if (this.topping === "peppers") {
             return 35;
         } else if (this.topping === "black-olives") {
@@ -95,7 +95,7 @@ Pizza.prototype.getToppingPrice = function () {
         } else {
             return 130;
         }
-    } if (this.size === "large") {
+    } else if (this.size === "large") {
         if (this.topping === "peppers") {
             return 50;
         } else if (this.topping === "black-olives") {
@@ -157,13 +157,114 @@ Pizza.prototype.getCrustPrice = function () {
 };
 //-------------------------- customer's order---------------->
 var customerName = "";
+var totalCost = 0;
+var pizzasOrdered = [];
+var subCounty = "";
+var landmark = "";
+var contactNumber = "";
 
-  var totalCost = 0;
+$("#checkout").click(function (e) {
+    e.preventDefault();
+    console.log("click",$("#flavour").val()) 
+    var flavourSelected = $("#flavour").val();
+    var sizeSelected = $("#size").val();
+    var toppingSelected = $("#topping").val();
+    var crustSelected = $("#crust").val();
 
-  var pizzasOrdered = [];
+    var newPizza = new Pizza(
+        flavourSelected,
+        sizeSelected,
+        toppingSelected,
+        crustSelected
+    );
 
-  var estate = "";
-  var houseNumber = "";
-        
+    pizzasOrdered.push(newPizza);
+    $("#flavour").val("");
+    $("#size").val("");
+    $("#topping").val("");
+    $("#crust").val("");
 
+    totalCost = 0;
 
+    for (let i = 0; i < pizzasOrdered.length; i++) {
+        totalCost += pizzasOrdered[i].getPizzaPrice();
+    }
+    console.log(newPizza)
+    console.log(newPizza.flavour)
+    console.log(newPizza.getFlavourPrice())
+    $("#bill-summary").append(
+        "<tr>" +
+        '<th scope="row">' +
+        newPizza.flavour +
+        " -" +
+        newPizza.getFlavourPrice() +
+        "</th>" +
+        "<td>" +
+        newPizza.toppings +
+        " - " +
+        newPizza.getToppingPrice() +
+        "</td>" +
+        "<td>" +
+        newPizza.crust +
+        " - " +
+        newPizza.getCrustPrice() +
+        "</td>" +
+        "<td>" +
+        newPizza.size +
+        "</td>" +
+        "<td>" +
+        newPizza.getPizzaPrice() +
+        "</td>" +
+        "</tr>"
+    );
+
+    if (pizzasOrdered.length > 0) {
+        $("#form-title").empty();
+        $("#form-title").append("Add Another Order");
+    }
+
+    $("#total-amount").fadeIn();
+    $("#checkout").fadeIn();
+    $("#orders-div").fadeIn();
+
+    $("#total-amount").empty();
+    $("#total-amount").append(totalCost);
+    $(".total-amount").show();
+});
+
+$("#checkout").click(function () {
+    $(".checkout-options").show();
+});
+
+$("#checkout-form").submit(function (e) {
+    e.preventDefault();
+    var name = $("#name").val();
+    var deliveryOption = $("#delivery-option").val();
+    customerName = name;
+    console.log(name);
+    console.log(deliveryOption);
+    $("#name").val("");
+    $("#delivery-option").val("");
+    $(".checkout-options").hide();
+    if (deliveryOption === "deliver") {
+        $(".location").show();
+        $(".delivery-cost").show();
+        $("#delivery-amount").append(200);
+        totalCost += 200;
+        $("#total-amount").empty();
+        $("#total-amount").append(totalCost);
+    } else {
+        alert(customerName + ": Your total bill is Ksh. " + totalCost + ". Your order will be ready for collection in the next 2 hours");
+    }
+});
+
+$("#location-form").submit(function (e) {
+e.preventDefault();
+var estateEntered = $("#estate").val();
+var houseNumberEntered = $("#house-number").val();
+estate = estateEntered;
+houseNumber = houseNumberEntered;
+$(".location").hide();
+alert(customerName + ": Your total bill is Ksh. " + totalCost + ". Your order will be delivered to " + subcounty + ", " + houseNumber + " in the next 2 hours");
+});
+})
