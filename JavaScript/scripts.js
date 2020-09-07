@@ -69,3 +69,56 @@ Pizza.prototype.getFlavourPrice = function () {
         }
     }
 };
+//----------------------------------Price for toppings---------------------->
+Pizza.prototype.getToppingPrice = function () {
+    if (this.size === "regular") {
+        if (this.topping === "peppers") {
+            return 20;
+        } else if (this.topping === "black-olives") {
+            return 110;
+        } else if (this.topping === "pineapple") {
+            return 70;
+        } else if (this.topping === "sweet-onions") {
+            return 20;
+        } else {
+            return 90;
+        }
+    } if (this.size === "medium") {
+        if (this.topping === "peppers") {
+            return 35;
+        } else if (this.topping === "black-olives") {
+            return 140;
+        } else if (this.topping === "pineapple") {
+            return 90;
+        } else if (this.topping === "sweet-onions") {
+            return 40;
+        } else {
+            return 130;
+        }
+    } if (this.size === "large") {
+        if (this.topping === "peppers") {
+            return 50;
+        } else if (this.topping === "black-olives") {
+            return 180;
+        } else if (this.topping === "pineapple") {
+            return 110;
+        } else if (this.topping === "sweet-onions") {
+            return 60;
+        } else {
+            return 170;
+        }
+    } if (this.size === "extra-large") {
+        if (this.topping === "peppers") {
+            return 60;
+        } else if (this.topping === "black-olives") {
+            return 210;
+        } else if (this.topping === "pineapple") {
+            return 140;
+        } else if (this.topping === "sweet-onions") {
+            return 80;
+        } else {
+            return 200;
+        }
+    }
+};
+  
