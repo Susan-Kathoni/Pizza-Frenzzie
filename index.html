@@ -25,134 +25,90 @@
             <img src="./images/logo.png" img id="logo" height="150" width="100" />
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <section> 
-                        <a class="navbar-brand" href="#">Welcome</a>
-                  </div>
-                  <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <ul class="nav navbar-nav navbar-center"></ul>
-                        <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">BEST DEALS MENU</a></li>
-                            <li><a href="#">ONLINE ORDERS</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                        </ul>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <img src="./images/cart-plus.svg" height="50" width="50">
-                        <a href="#">Shopping Basket</a>
-                    </ul>
-                  </div>
-                </div>
-              </nav>         
-
-                    </section>
-                    
-
-        </div>
-        <!------------------items--------------->
-        
-           
-        </section>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <div class="items-list">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">BEST DEALS MENU</a></li>
-                <li><a href="#">ONLINE ORDERS</a></li>
-                <li><a href="#">ABOUT US</a></li>
-            </ul>
-        </div>
-        <div class="shopping-basket">
-            <img src="./images/cart-plus.svg" height="50" width="50">
-            <a href="#">Shopping Basket</a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-
-            </div>
-            <div class="col-md-8">
-                <h1>
-                    <b>Welcome to Suzzie's delight.<br />
-                        Your favorite yummies!!!</b>
-                </h1>
-            </div>
-        </div>
-    </div>
-
-    <!----------------------pizza order form------------------->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 id="form-title">PLACE YOUR ORDER</h3>
-                <hr />
-                <form id="pizza-form">
-                    <div class="form-group">
-    <!-----------------------------pizza flavours--------------->
-                        <label for="type">PIZZA FLAVOUR</label>
-                        <select class="form-control" id="type" required>
-                            <option value="">...</option>
-                            <option value="beef-pepporoni">Beef Pepporoni</option>
-                            <option value="cheese-pizza">Cheese Pizza</option>
-                            <option value="macon-bbq">Macon BBQ</option>
-                            <option value="meat-deluxe">Meat Deluxe</option>
-                            <option value="veggie-deluxe">Veggie Deluxe</option>
-                        </select>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-----------------------navigation bar------------------------->
+                        <section>
+                            <a class="navbar-brand" href="#">Welcome</a>
                     </div>
-    <!-------------------------pizza toppings----------------------->
-                    <div class="form-group">
-                        <label for="topping">Topping</label>
-                        <select class="form-control" id="topping" required>
-                            <option value="">...</option>
-                            <option value="pepper">Pepper</option>
-                            <option value="black-olives">Black Olives</option>
-                            <option value="pineapple">Pineapple</option>
-                            <option value="sweet Onions">Sweet Onions</option>
-                            <option value="ham">Ham</option>
-                        </select>
-                    </div> -->
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav navbar-center"></ul>
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="#">BEST DEALS MENU</a></li>
+                                <li><a href="#">ONLINE ORDERS</a></li>
+                                <li><a href="#">ABOUT US</a></li>
+                            </ul>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <img src="./images/cart-plus.svg" height="50" width="50">
+                            <a href="#">Shopping Basket</a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-8">
+                    <h1>
+                        <b>Welcome to Suzzie's delight.<br />
+                            Your favorite yummies!!!</b>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------pizza order form------------------->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 id="form-title">PLACE YOUR ORDER</h3>
+                    <hr />
+                    <form id="pizza-form">
+                        <div class="form-group">
+                            <!-----------------------------pizza flavours--------------->
+                            <label for="type">PIZZA FLAVOUR</label>
+                            <select class="form-control" id="type" required>
+                                <option value="">Select</option>
+                                <option value="beef-pepporoni">Beef Pepporoni</option>
+                                <option value="cheese-pizza">Cheese Pizza</option>
+                                <option value="macon-bbq">Macon BBQ</option>
+                                <option value="meat-deluxe">Meat Deluxe</option>
+                                <option value="veggie-deluxe">Veggie Deluxe</option>
+                            </select>
+                        </div>
+                        <!-------------------------pizza toppings----------------------->
+                        <div class="form-group">
+                            <label for="topping">Pizza Toppings</label>
+                            <select class="form-control" id="topping" required>
+                                <option value="">Select</option>
+                                <option value="pepper">Pepper</option>
+                                <option value="black-olives">Black Olives</option>
+                                <option value="pineapple">Pineapple</option>
+                                <option value="sweet Onions">Sweet Onions</option>
+                                <option value="ham">Ham</option>
+                            </select>
+                        </div> -->
+                        <!---------------------------pizza crust----------------------->
+                        <div class="form-group">
+                            <label for="crust">Crust</label>
+                            <select class="form-control" id="crust" required>
+                                <option value="">Select</option>
+                                <option value="thin">Thin</option>
+                                <option value="thick">Thick</option>
+                                <option value="">Thick</option>
+                            </select>
+                        </div>
 
 
 
@@ -171,24 +127,24 @@
 
 
 
-                    <!--------------------------jquery------------------------>
-                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                        crossorigin="anonymous"></script>
-                    <!----------------------- popper js----------------------->
-                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                        crossorigin="anonymous"></script>
-                    <!----------------bootstrap css--------------------------->
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-                        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-                        crossorigin="anonymous"></script>
-                    <!-----------------------bootstrap js--------------------->
-                    <script src="./JavaScript/js/bootstrap.min.js"></script>
-                    <!----------------------font awesome--------------------->
-                    <scripts src="https://kitfontawesome.com/332a215f17.js" crossorigin="anonymous"></scripts>
-                    <!-----------------custom js------------------------------>
-                    <script type="text/javascript" src="./JavaScript/scripts.js"></script>
+                        <!--------------------------jquery------------------------>
+                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                            crossorigin="anonymous"></script>
+                        <!----------------------- popper js----------------------->
+                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                            crossorigin="anonymous"></script>
+                        <!----------------bootstrap css--------------------------->
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                            crossorigin="anonymous"></script>
+                        <!-----------------------bootstrap js--------------------->
+                        <script src="./JavaScript/js/bootstrap.min.js"></script>
+                        <!----------------------font awesome--------------------->
+                        <scripts src="https://kitfontawesome.com/332a215f17.js" crossorigin="anonymous"></scripts>
+                        <!-----------------custom js------------------------------>
+                        <script type="text/javascript" src="./JavaScript/scripts.js"></script>
 </body>
 
 </html>
