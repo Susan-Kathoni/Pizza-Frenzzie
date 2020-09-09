@@ -28,52 +28,19 @@ myNavbar {
     color: teal;
 }
 
-/*###################################About#####################*/
-.about-pictures {
-    position: relative;
-}
-
-.about-image {
-    position: absolute;
-    width: 100 px;
-    height: 100px;
-    transition: all 3s ease;
-    opacity: 0.8;
-}
-
-.img-1 {
-    left: 0%;
-    top: 0%;
-}
-
-.img-2 {
-    left: 20%;
-    top: 20%;
-    z-index: 10;
-}
-
-.img-3 {
-    left: 40%;
-    top: 45%;
-    z-index: 20;
-}
-
-.img-4 {
-    left: 40%;
-    top: 0%;
-}
-
-.img-5 {
-    left: 0%;
-    top: 45%;
-
-}
+/*################### Best deals pictures#####################*/
 
 #form-title {
-    padding-top: 120px;
+    padding-top: 05px;
 }
 
-#order-form {
-    padding-top: 10px;
-    align-content: center;
+#row{
+    background-image: url("../images/pizza.jpg");
+    background-repeat: no-repeat;
+}
+#rd{
+    color: crimson;
+}
+footer{
+    background-color: rgb(102, 34, 34);
 }
