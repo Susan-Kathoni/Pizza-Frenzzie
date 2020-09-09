@@ -40,7 +40,18 @@ myNavbar {
 }
 #rd{
     color: crimson;
+    font-size: 25px;
+}
+#rd1{
+    color: white;
+    
 }
 footer{
     background-color: rgb(102, 34, 34); 
+}
+#title {
+    color: ghostwhite;
+}
+#label {
+    color: ghostwhite;
 }
